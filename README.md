@@ -23,6 +23,10 @@ For production use we would need to:
 - package any other tools beyond just Firefox into the xubuntu image
 - determine an approach for persistent storage of `/home` on the xubuntu container (e.g. NFS/EFS)
 
+If we truly need to support Windows desktops, then there are a few options:
+- Use a Windows EC2 `*.metal` instance to host HyperV instances and use RDP to connect to them
+- Setup and licence Terminal Services, then maintain a dynamic pool of Windows instances to serve remote terminals (preferred)
+
 # Setup
 We already assume the following exists:
 - A docker host with docker-compose installed
